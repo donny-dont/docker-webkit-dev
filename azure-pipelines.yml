@@ -72,13 +72,3 @@ stages:
         arguments: --build-arg IMAGE_TAG=1809
         tags: |
           1809
-    - task: Docker@2
-      displayName: Build webkitdev/buildbot:1809 image
-      inputs:
-        command: build
-        repository: webkitdev/buildbot
-        dockerfile: '$(Build.SourcesDirectory)/buildbot/Dockerfile'
-        buildContext: '$(Build.SourcesDirectory)/buildbot'
-        arguments: --build-arg IMAGE_TAG=1809
-        tags: |
-          1809
